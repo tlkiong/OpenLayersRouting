@@ -69,20 +69,24 @@ function selectRoute(caseNumber, val) {
     var layerList = [];    
 
     for (var i = 0, j = objReceived.routeObj.length; i < j; i++) {
-        path = objReceived.routeObj[i].geometry.paths;
+        if(objReceived.routeObj[i].geometry == undefined || objReceived.routeObj[i].geometry == null) {
+            console.log("The below object has no Geometry")
+            console.log(objReceived.routeObj[i]);
+        } else {
+            path = objReceived.routeObj[i].geometry.paths;
+            // Get the center route among all the route available
+            if(i == Math.floor(j/2)) {
+                // Get the center point
+                pathSize = Math.floor(path.length/2)
+                if(pathSize > 0) {
+                    pathSize -= 1;
+                }
 
-        // Get the center route among all the route available
-        if(i == Math.floor(j/2)) {
-            // Get the center point
-            pathSize = Math.floor(path.length/2)
-            if(pathSize > 0) {
-                pathSize -= 1;
+                innerPath = path[pathSize];
+                mapCenter = innerPath[Math.floor(innerPath.length/2)-1];
             }
-
-            innerPath = path[pathSize];
-            mapCenter = innerPath[Math.floor(innerPath.length/2)-1];
+            layerList.push(getRouteLineVectorLayer(path,i));
         }
-        layerList.push(getRouteLineVectorLayer(path,i));
     }
 
     map.setView(
