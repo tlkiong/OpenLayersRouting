@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="http://openlayers.org/en/v3.9.0/css/ol.css" type="text/css">
+    <link rel="stylesheet" href="/styles/main.css" type="text/css">
+   
+    <script src="http://openlayers.org/en/v3.9.0/build/ol.js" type="text/javascript"></script>
+    
+    <title>Routing!</title>
+</head>
+
+<body>
+    <h1>My Map</h1>
+    <div id="this_map"></div>
+    <div id="scale-line" class="scale-line"></div>
+    <div id="info"></div>
+
+    <br>
+    <hr>
+    <br>
+
+    <input type="number" id="caseNumber" placeholder="Case number (2, 3 or 4)">
+    <input type="text" id="val" placeholder="No of vehicles / No of location">
+    <button onclick="showRoute()">Show Routes</button>
+
+    <!-- This script has to be below the 'this_map' above. Cause its using it to identify the point to render the map -->
+    <script src="/js/main.js" type="text/javascript"></script>
+</body>
+
+</html>

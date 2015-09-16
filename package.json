@@ -1,0 +1,23 @@
+{
+  "name": "openlayersrouting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "www/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server ./www -p 8000 -o -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlkiong/OpenLayersRouting.git"
+  },
+  "author": "Kiong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tlkiong/OpenLayersRouting/issues"
+  },
+  "homepage": "https://github.com/tlkiong/OpenLayersRouting#readme",
+  "dependencies": {
+    "http-server": "^0.8.0"
+  }
+}
