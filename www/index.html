@@ -16,12 +16,12 @@
     <div id="scale-line" class="scale-line"></div>
     <div id="info"></div>
 
-    <br>
     <hr>
-    <br>
-
-    <input type="number" id="caseNumber" placeholder="Case number (2, 3 or 4)" value="2">
-    <input type="text" id="val" placeholder="No of vehicles / No of location" value="3">
+    <p>Use cases available: 2, 3 & 4</p>
+    <p>For use case 2 & 3, the number of vehicle choices are: 3, 5 & 100 </p>
+    <p>For use case 4, the number of location that driver MUST reach at the same time: 3 or 6</p>
+    <input type="number" id="caseNumber" placeholder="Case number (2, 3 or 4)">
+    <input type="text" id="val" placeholder="No of vehicles / No of location">
     <button onclick="showRoute()">Show Routes</button>
 
     <!-- This script has to be below the 'this_map' above. Cause its using it to identify the point to render the map -->
