@@ -111,7 +111,7 @@ function selectRoute(caseNumber, val) {
 
 function getLocationLayer() {
     console.log(locationCoordinateList);
-    for (var k = 0, l = locationCoordinateList.length; k < l; k++) {
+    for (var k = 0, l = 49; k < l; k++) {
         // You need to transform depending on the type of map you are using. The below transformation is for bing & open street map
         locationCoordinateList[k] = ol.proj.transform(locationCoordinateList[k], 'EPSG:4326', 'EPSG:3857');
     }
